@@ -178,4 +178,23 @@
     background: var(--red);
     color: #fff;
   }
-  
+  /* Ajuste de imágenes de integrantes */
+.card-img-top {
+    height: 380px;          /* o 400px si querés más grandes */
+    object-fit: cover;      /* recorta suavemente la imagen */
+    object-position: center; /* centra siempre el foco */
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.img-top {
+    object-position: top;
+}
+
+.img-center {
+    object-position: center;
+}
+
+.img-bottom {
+    object-position: bottom;
+}
