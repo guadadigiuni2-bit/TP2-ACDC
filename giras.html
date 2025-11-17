@@ -14,29 +14,23 @@
 </head>
 <body class="bg-black">
 
-  <!-- NAVBAR (igual que en el resto del sitio, con GIRAS activo) -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-danger sticky-top py-3 shadow-lg">
     <div class="container">
       <a class="navbar-brand logo-acdc fs-3" href="index.html">AC⚡DC</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-center" id="menu">
         <ul class="navbar-nav gap-3 align-items-center main-menu">
           <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="discografia.html" data-bs-toggle="dropdown">Discografía</a>
-            <ul class="dropdown-menu dropdown-menu-dark text-center">
-              <li><a class="dropdown-item" href="discografia.html">Panorama</a></li>
-              <li><a class="dropdown-item" href="albumes-estudio.html">Álbumes de estudio</a></li>
-              <li><a class="dropdown-item" href="albumes-en-vivo.html">Álbumes en vivo</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link active fw-bold" href="giras.html">Giras</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="discografia.html">Discografía</a></li>
+          <li class="nav-item"><a class="nav-link" href="giras.html">Giras</a></li>
           <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
           <li class="nav-item"><a class="nav-link" href="integrantes.html">Integrantes</a></li>
-          <li class="nav-item"><a class="nav-link" href="sobreelsitio.html">Sobre el sitio</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobreelsitio.html">Sitio</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
       </div>
@@ -234,7 +228,20 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+
+<!-- CONTROL DE MÚSICA -->
+<div id="musicControl" class="music-control bg-dark border border-danger text-light p-3 rounded">
+    <button id="playPauseBtn" class="btn btn-danger btn-sm mb-2 w-100">▶ Play</button>
+  
+    <label for="volumen" class="small">Volumen</label>
+    <input type="range" id="volumen" min="0" max="1" step="0.01" class="form-range">
+  </div>
+  
+  <!-- AUDIO OCULTO -->
+  <audio id="bgMusic" src="media/acdc.mp3" loop></audio>
+
+  <script src="js/musica.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
